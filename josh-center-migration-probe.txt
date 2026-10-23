@@ -1,2 +1,0 @@
-Center migration verification: librs
-Direction: kernel to subtree
