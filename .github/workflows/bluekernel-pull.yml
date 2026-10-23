@@ -15,13 +15,13 @@ concurrency:
 jobs:
   pull:
     if: ${{ vars.JOSH_SYNC_ENABLED == 'true' }}
-    uses: vivoblueos/josh-sync/.github/workflows/bluekernel-pull.yml@3e0bfbbfe6825e5e144a4781cfb040a5396eb820
+    uses: vivoblueos-lab/josh-sync/.github/workflows/bluekernel-pull.yml@3e0bfbbfe6825e5e144a4781cfb040a5396eb820
     with:
       # JOSH_SYNC_APP_CLIENT_ID and JOSH_SYNC_APP_PRIVATE_KEY come from organization variables and secrets
       github-app-client-id: ${{ vars.JOSH_SYNC_APP_CLIENT_ID }}
       # Replace xxx in xxx[bot] with the GitHub App name
       pr-author: "blueos-josh-sync[bot]"
-      josh-sync-repository: vivoblueos/josh-sync
+      josh-sync-repository: vivoblueos-lab/josh-sync
       # Keep this aligned with the reusable workflow revision above
       josh-sync-revision: 3e0bfbbfe6825e5e144a4781cfb040a5396eb820
       branch-name: bluekernel-pull
